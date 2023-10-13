@@ -4,7 +4,7 @@ import profilePic from "../../assets/images/profile.png";
 
 const Hero = () => {
   return (
-    <section className="hero">
+    <section className="hero" id="home">
       <article className="hero__content">
         <h2 className="hero__title">{"HI, I'M FL</>IA!"}</h2>
         <p className="hero__subtitle">web developer</p>
