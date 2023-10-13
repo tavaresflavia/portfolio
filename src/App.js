@@ -3,6 +3,7 @@ import "./App.scss";
 import CardList from "./components/CardList/CardList";
 import Hero from "./components/Hero/Hero.js";
 import Navbar from "./components/Navbar/Navbar";
+import Skills from "./components/Skills/Skills";
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <main className="app">
         <Navbar />
         <Hero />
+        <Skills/>
         <CardList />
       </main>
     </BrowserRouter>

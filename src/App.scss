@@ -1,5 +1,11 @@
-*{font-family:Helvetica, sans-serif;
-margin:0;}
-.app{
-    background-color: #000;
+@use './styles/partials/variables' as *;
+
+* {
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+}
+.app {
+  background-color: #000;
+  max-width: $desktop-width ;
+  margin:auto;
 }
