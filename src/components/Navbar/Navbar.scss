@@ -2,13 +2,24 @@
 @use "../../styles/partials/mixins" as *;
 
 .nav {
-  height: 2rem;
-  display: flex;
-  justify-content: flex-end;
-  padding: 1em;
-  padding-block: $mobile-margin;
-  position:sticky;
+  width: 100%;
+  max-width: $desktop-width;
+  position: fixed;
+  background-color: #000000;
+  &__bar {
+    color: $light-color;
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    padding-block: $mobile-margin;
+  }
+  &__icon {
+    transform: rotate(90deg);
+    font-size: 1.5rem;
+  }
 }
+
 .burger {
   &__bar {
     width: 2rem;
@@ -28,12 +39,10 @@
         transform-origin: left;
         transition: ease-out 0.5s;
       }
-
       &:nth-child(2) {
         transform: scale(0);
         transition: ease-out 0.5s;
       }
-
       &:nth-child(3) {
         transform: rotate(-45deg) translateX(-0.35rem);
         transition: ease-out 0.5s;
@@ -49,9 +58,11 @@
     display: flex;
     flex-direction: column;
     z-index: 10;
-    width: 100%;
+    padding-top: 6rem;
     height: 100vh;
-    background-color: #000000;
+    background-color: #000;
+    margin: 0 auto;
+    width: 100%;
   }
 
   &__link {
@@ -60,8 +71,7 @@
     background-color: #000000;
     border: none;
     margin: 0 auto;
-    margin-block:$mobile-margin;
-
+    margin-block: $mobile-margin;
     &:hover {
       border-bottom: solid 2px $outline-color;
     }
