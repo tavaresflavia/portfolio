@@ -33,8 +33,10 @@ const Navbar = () => {
   };
 
   return (
-    <div>
-      <nav className="nav">
+    <div  className="nav">
+      <nav className="nav__bar">
+
+        <div className="nav__icon">{"</>"} </div>
         <div className="burger" onClick={updateMenu}>
           <div className={burgerClass}></div>
           <div className={burgerClass}></div>

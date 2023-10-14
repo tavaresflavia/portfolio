@@ -1,23 +1,25 @@
 @use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
 .skills {
   color: $light-color;
-  margin-inline:$mobile-margin;
+  margin-inline: $mobile-margin;
 
+  &__title {
+    @include title-font;
+  }
   &__icons {
     padding: $mobile-margin;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
   }
-
   &__wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin:0 $mobile-margin  $mobile-margin;
+    margin: 0 $mobile-margin $mobile-margin;
   }
-
   &__frame {
     border: solid 2px $outline-color;
     width: 100px;
@@ -27,20 +29,19 @@
     align-items: center;
     border-radius: 50%;
   }
-
   &__img {
     width: 90px;
   }
   &__name {
     margin-top: 0.5rem;
   }
-  &__notes{
+  &__notes {
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  &__notes-content{
-    margin-block:0.5rem;
+  &__notes-content {
+    margin-block: 0.5rem;
   }
 }
