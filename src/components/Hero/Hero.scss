@@ -3,13 +3,12 @@
 
 .hero {
   color: #fff;
-  padding-top:2.5rem;
-  padding-inline: $mobile-margin;
-
+  padding-top: 2.5rem;
+  @include section-padding;
   &__title {
     display: flex;
     font-size: 2.25rem;
-    @include tablet{
+    @include tablet {
       font-size: 4rem;
     }
     justify-content: center;
@@ -46,37 +45,87 @@
     border-right: 2px solid transparent;
     transform: translateX(1.25rem);
     animation: typewriter 1s steps(13) 1.2s 1 normal both,
-      blinkTextCursor 500ms steps(13) 5 normal;
+      blinkTextCursor 300ms steps(13) 1s 5 normal;
     @include tablet {
-      transform: translateX(6rem);
+      transform: translateX(5rem);
     }
   }
 
-  &__profile-container{
+  &__profile-container {
     display: flex;
-    margin-block:$tablet-margin;
+    margin-block: $tablet-margin;
     flex-direction: column;
-    @include tablet{
+
+    @include tablet {
       flex-direction: row;
+      padding-top: 4rem;
     }
   }
 
   &__img {
     border-radius: 50%;
     height: 15rem;
-    margin:0 auto;
-    margin-bottom:$tablet-margin;
+    margin: 0 auto;
+    margin-bottom: $tablet-margin;
+    @include tablet {
+      height: 20rem;
+    }
   }
-  
 }
 
-.bio{
-  &__title{
-    @include title-font;
+.bio {
+  @include tablet {
+    padding-left: $tablet-margin;
   }
-  &__content{
-    margin-block:$mobile-margin;
-
+  &__title-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablet{
+      align-items: start;
+    }
+    @include desktop {
+      flex-direction: row;
+      align-items: start;
+      justify-content: space-between;
+    }
+  }
+  &__title {
+    font-size: 1rem;
+    @include tablet {
+      font-size: 1.5rem;
+    }
+  }
+  &__icons {
+    flex-shrink: 0;
+    margin-top: $mobile-margin;
+    align-self: flex-end;
+    @include desktop {
+      margin-top: 0;
+    }
+  }
+  &__icon {
+    height: 1.5rem;
+    &:last-child {
+      margin-left: 0.5rem;
+    }
+    @include desktop {
+      height: 2.5rem;
+    }
+  }
+  &__content {
+    @include body-font;
+    margin-block: $mobile-margin;
+    text-align: justify;
+    &:last-child {
+      text-align: left;
+    }
+  }
+  &__email {
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #fff;
   }
 }
 

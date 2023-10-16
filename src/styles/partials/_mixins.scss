@@ -23,7 +23,7 @@
 
 @mixin title-font {
   color: $outline-color;
-  padding:4rem 0 0.5rem;
+  padding: 4rem 0 0.5rem;
   margin-bottom: 2rem;
   border-bottom: 1px solid $outline-color;
   text-align: right;
@@ -32,5 +32,12 @@
   @include tablet {
     font-size: 2rem;
     line-height: 2.25rem;
+  }
+}
+
+@mixin section-padding {
+  padding-inline: $mobile-margin;
+  @include tablet {
+    padding-inline: $tablet-margin;
   }
 }
