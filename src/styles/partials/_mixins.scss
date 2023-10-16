@@ -14,18 +14,23 @@
 
 @mixin body-font {
   font-size: 0.8125rem;
-  line-height: 1.25rem;
+  line-height: 1rem;
   @include tablet {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
 @mixin title-font {
-  font-size: 1.125rem;
+  color: $outline-color;
+  padding:4rem 0 0.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid $outline-color;
+  text-align: right;
+  font-size: 1.375rem;
   line-height: 1.5rem;
   @include tablet {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+    font-size: 2rem;
+    line-height: 2.25rem;
   }
 }

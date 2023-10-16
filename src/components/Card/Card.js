@@ -1,13 +1,14 @@
 import React from 'react';
+import "./Card.scss";
 
 const Card = ({project}) => {
-    const {title, description} = project;
-    console.log(project)
+    const {title, description, video} = project;
+    console.log(project.video)
     return (
         <article className = "article">
-            <h2 className = "article__title">{title}</h2>
+            <h3 className = "article__title">{title}</h3>
             <p className = "article__description">{description}</p>
-            <div className = "article__video">video</div>
+            {video && <iframe className = "article__video"src={video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>}
 
             
         </article>

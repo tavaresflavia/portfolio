@@ -10,6 +10,7 @@ const projects = [
       "https://github.com/tavaresflavia/kpi-trek-api",
     ],
     liveSite: "",
+    video:"https://www.youtube.com/embed/Eu5hj1LfxmM?si=Dyl_KYN_fgrBXrgX"
   },
   {
     title: "Todo List",
