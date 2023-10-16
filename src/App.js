@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import "./App.scss";
-import CardList from "./components/CardList/CardList";
+import ProjectList from "./components/ProjectList/ProjectList";
 import Hero from "./components/Hero/Hero.js";
 import Navbar from "./components/Navbar/Navbar";
 import Skills from "./components/Skills/Skills";
@@ -13,7 +13,7 @@ function App() {
         <Navbar />
         <Hero />
         <Skills/>
-        <CardList />
+        <ProjectList />
       </main>
     </BrowserRouter>
   );

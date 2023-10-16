@@ -22,7 +22,7 @@
 }
 
 @mixin title-font {
-  color: $outline-color;
+  color: #fff;
   padding: 4rem 0 0.5rem;
   margin-bottom: 2rem;
   border-bottom: 1px solid $outline-color;
@@ -30,6 +30,7 @@
   font-size: 1.375rem;
   line-height: 1.5rem;
   @include tablet {
+    margin-bottom: 2rem;
     font-size: 2rem;
     line-height: 2.25rem;
   }

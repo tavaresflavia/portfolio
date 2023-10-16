@@ -1,19 +1,19 @@
 import React from "react";
-import Card from "../Card/Card";
+import Project from "../Project/Project";
 import projects from "../../utils/projects";
-import './CardList.scss';
+import './ProjectList.scss';
 
 
-const CardList = () => {
+const ProjectList = () => {
     console.log(projects)
   return (
     <section className="projects" id="projects">
-        <h2 className="projects__title" >PROJECTS</h2>
+        <h2 className="projects__title" >Projects</h2>
       {projects.map((project) => {
-       return <Card key={project.title}
+       return <Project key={project.title}
         project ={project}/>})}
     </section>
   );
 };
 
-export default CardList;
+export default ProjectList;

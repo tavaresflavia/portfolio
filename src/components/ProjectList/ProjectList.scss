@@ -1,0 +1,11 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.projects{
+    @include section-padding;
+    color:#fff;
+    &__title{
+    @include title-font;
+    }
+
+}

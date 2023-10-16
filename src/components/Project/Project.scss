@@ -1,0 +1,32 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+.project {
+  &__title {
+    margin-block: $mobile-margin 0 0.5rem;
+    font-size: 1rem;
+    @include tablet {
+      margin-block: $tablet-margin 0 $mobile-margin;
+      font-size: 1.5rem;
+    }
+  }
+  &__description {
+    @include body-font;
+    margin-block: $mobile-margin;
+    @include tablet {
+      margin-block: $tablet-margin;
+    }
+  }
+  &__video {
+    margin-block: $mobile-margin;
+    width: 100%;
+    height: calc(50vw);
+    display: flex;
+    justify-content: center;
+    @include tablet {
+      margin-block: $tablet-margin;
+    }
+    @include desktop {
+      height: 40rem;
+    }
+  }
+}

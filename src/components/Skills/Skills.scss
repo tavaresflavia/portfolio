@@ -51,12 +51,17 @@
     align-items: center;
   }
   &__notes-content {
+    @include body-font;
     margin: 0.5rem 0 $mobile-margin;
     @include tablet{
     margin-bottom: $tablet-margin;
-      
     }
-    @include body-font;
+    &:last-child{
+      margin-bottom: 0;
+      @include tablet{
+        margin-bottom:0;
+        }
+    }
   }
 }
 
