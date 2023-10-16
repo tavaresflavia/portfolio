@@ -48,17 +48,14 @@ const Navbar = () => {
         <button value="home" className="menu__link" onClick={handleNavigate}>
           Home
         </button>
+        <button value="skills" className="menu__link" onClick={handleNavigate}>
+          Skills
+        </button>
         <button
           value="projects"
           className="menu__link"
           onClick={handleNavigate}>
           Projects
-        </button>
-        <button value="skills" className="menu__link" onClick={handleNavigate}>
-          Skills
-        </button>
-        <button value="contact" className="menu__link" onClick={handleNavigate}>
-          Contact
         </button>
       </div>
     </div>
