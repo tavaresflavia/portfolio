@@ -56,25 +56,32 @@
   &--visible {
     position: absolute;
     display: flex;
+    align-items: flex-end;
+    right: 0;
     flex-direction: column;
-    z-index: 10;
-    padding-top: 6rem;
-    height: 100vh;
+    z-index: 1000;
+    border-bottom-left-radius: 0.5rem;
     background-color: #000;
     margin: 0 auto;
-    width: 100%;
-    @include tablet{
-    padding-top: 10rem;
+    width: 4rem;
+
+    @include tablet {
+      width: 6.25rem;
     }
   }
 
   &__link {
-    color: $outline-color;
-    @include title-font;
+    font-weight: 600;
+    color: #fff;
     background-color: #000000;
     border: none;
     margin: 0 auto;
-    margin-block: $mobile-margin;
+    margin-block: 0.5rem;
+    @include tablet {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-block: $mobile-margin;
+    }
     &:hover {
       border-bottom: solid 2px $outline-color;
     }

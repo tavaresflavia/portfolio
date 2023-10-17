@@ -10,7 +10,8 @@ const projects = [
       "https://github.com/tavaresflavia/kpi-trek-api",
     ],
     liveSite: "",
-    video:"https://www.youtube.com/embed/Eu5hj1LfxmM?si=Dyl_KYN_fgrBXrgX"
+    video:"https://www.youtube.com/embed/Eu5hj1LfxmM?si=Dyl_KYN_fgrBXrgX", 
+    images: [{url:"/images/kpitrek-home.png", title: "Home Page"},{url:"/images/kpitrek-1.png", title: "Request Page"}, {url:"/images/kpitrek-2.png", title: "KPI Page"}, {url:"/images/kpitrek-3.png", title: "Login (Google & JWT)"}]
   },
   {
     title: "Todo List",
@@ -21,6 +22,7 @@ const projects = [
       "https://github.com/tavaresflavia/todo-list",
       "https://github.com/tavaresflavia/todo-list-api",
     ],
+    images: [{url:"/images/kpitrek-home.png", title: "Home Page"},{url:"/images/kpitrek-1.png", title: "Request Page"}, {url:"/images/kpitrek-2.png", title: "KPI Page"}, {url:"/images/kpitrek-3.png", title: "Login (Google & JWT)"}]
   },
   {
     title: "BrainFlix",

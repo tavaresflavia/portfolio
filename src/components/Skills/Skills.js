@@ -12,7 +12,7 @@ const Skills = () => {
       <div className="skills__icons">
         {skills.map((skill) => {
           return (
-            <div className="skills__wrap">
+            <div className="skills__wrap" key={skill.name}>
               <div className="skills__frame">
                 <svg
                   style={{ fill: skill.color }}

@@ -5,7 +5,6 @@ import './ProjectList.scss';
 
 
 const ProjectList = () => {
-    console.log(projects)
   return (
     <section className="projects" id="projects">
         <h2 className="projects__title" >Projects</h2>

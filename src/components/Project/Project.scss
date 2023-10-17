@@ -22,6 +22,7 @@
     height: calc(50vw);
     display: flex;
     justify-content: center;
+    border-radius: 0.3125rem;
     @include tablet {
       margin-block: $tablet-margin;
     }
