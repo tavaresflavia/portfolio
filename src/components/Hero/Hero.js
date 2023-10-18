@@ -68,7 +68,7 @@ const Hero = () => {
           <h2 className="bio__title">
             Engineer | Full-Stack Developer | Data Analyst
           </h2> <div className="bio__icons"> <a href="https://github.com/tavaresflavia"><img src={githubIcon} alt= "github icon" className="bio__icon"></img></a> <a href="https://www.linkedin.com/in/tavaresflavia/"><img src={linkedinIcon} alt= "linkedin icon" className="bio__icon"></img> </a> </div> </div>
-          <p className="bio__content">👋Hi, I'm Flavia!</p>
+          <p className="bio__content">👋 Hi, I'm Flavia!</p>
           <p className="bio__content">
             I'm a passionate Full Stack Developer committed to turning abstract
             concepts into fully functional web applications. My greatest

@@ -2,7 +2,7 @@ const projects = [
   {
     title: "KPI Trek",
     description:
-      "A collaborative KPI tracking website to enter data, visualize metrics, track progress on a ticket-based platform. It allows efficient request management, sorting, filtering, and status updates.Utilized Nodemailer for notifications, Passport.js for authentication, Chart.js for data visualization, and Moment.js for date handling.",
+      "A collaborative KPI tracking website to enter data, visualize metrics, track progress on a ticket-based platform. It allows efficient request management, sorting, filtering, and status updates. Utilized Nodemailer for notifications, Passport.js for authentication, Chart.js for data visualization, and Moment.js for date handling.",
     iconName: "kpiTrekIcon",
     stack: ["react", "sass", "mysql", "express", "node"],
     gitRepo: [

@@ -1,7 +1,8 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 .icons{
-    scale: 0.8;
+    width: 100%;
+  
     display: flex;
     justify-content: center;
     padding-block: $mobile-margin;
@@ -10,7 +11,13 @@
         scale:1;
     };
     &__svg{
+        scale: 0.7;
+        margin-inline: 0;
+        @include tablet{
+        scale: 1;
+
         margin-inline: $mobile-margin;
+    }
     }
     &__img{
         max-width: 5rem;
