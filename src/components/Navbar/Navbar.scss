@@ -7,7 +7,7 @@
   position: fixed;
   background-color: #000000;
   &__bar {
-    color: $light-color;
+    color: #fff;
     height: 2rem;
     display: flex;
     justify-content: space-between;
@@ -24,7 +24,7 @@
   &__bar {
     width: 2rem;
     height: 0.25em;
-    background-color: $light-color;
+    background-color: #fff;
     border-radius: 0.25rem;
     margin-top: 0.25rem;
     transform: rotate(0) translate(0);
@@ -32,7 +32,7 @@
     &--clicked {
       width: 2rem;
       height: 0.25em;
-      background-color: $light-color;
+      background-color: #fff;
       border-radius: 0.5em;
       &:nth-child(1) {
         transform: rotate(45deg);
@@ -83,7 +83,7 @@
       margin-block: $mobile-margin;
     }
     &:hover {
-      border-bottom: solid 2px $outline-color;
+      border-bottom: solid 2px #fff;
     }
   }
 }

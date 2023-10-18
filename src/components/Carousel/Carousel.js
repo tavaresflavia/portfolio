@@ -4,10 +4,11 @@ import "./Carousel.scss";
 const Carousel = ({ images }) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [autoPlay, setAutoPlay] = useState(true);
-  let timeOut = true;
+  let timeOut = null;
 
   useEffect(() => {
-    timeOut === autoPlay &&
+    timeOut =
+      autoPlay &&
       setTimeout(() => {
         slideRight();
       }, 2500);
@@ -25,8 +26,8 @@ const Carousel = ({ images }) => {
     <div
       className="carousel"
       onMouseEnter={() => {
-        setAutoPlay(false);
         clearTimeout(timeOut);
+        setAutoPlay(false);
       }}
       onMouseLeave={() => {
         setAutoPlay(true);
@@ -38,40 +39,41 @@ const Carousel = ({ images }) => {
               key={index}
               className={
                 index === currentImage
-                  ? "carousel__card carousel__card--active"
-                  : "carousel__card"
+                  ? "card card--active"
+                  : "card"
               }>
-                <img
-                  className="card__image"
-                  src={image.url}
-                  alt="website frames"
-                />
-
-                  <h3 className="card__title">{image.title}</h3>
-
-              </div>
+              <img
+                className="card__image"
+                src={image.url}
+                alt="website frames"
+              />
+              <h3 className="card__title">{image.title}</h3>
+            </div>
           );
         })}
-        <div className="carousel__arrow carousel__arrow--left" onClick={slideLeft}>
+        <div
+          className="carousel__arrow carousel__arrow--left"
+          onClick={slideLeft}>
           &lsaquo;
         </div>
-        <div className="carousel__arrow carousel__arrow--right" onClick={slideRight}>
+        <div
+          className="carousel__arrow carousel__arrow--right"
+          onClick={slideRight}>
           &rsaquo;
         </div>
         <div className="pagination">
-        {images.map((_, index) => {
-              return (
-                <div
-                  key={index}
-                  className={
-                    index === currentImage
-                      ? "pagination__dot pagination__dot-active"
-                      : "pagination__dot"
-                  }
-                  onClick={() => setCurrentImage(index)}
-                ></div>
-              );
-            })}
+          {images.map((_, index) => {
+            return (
+              <div
+                key={index}
+                className={
+                  index === currentImage
+                    ? "pagination__dot pagination__dot--active"
+                    : "pagination__dot"
+                }
+                onClick={() => setCurrentImage(index)}></div>
+            );
+          })}
         </div>
       </div>
     </div>

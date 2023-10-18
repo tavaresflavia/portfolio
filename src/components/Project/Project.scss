@@ -1,18 +1,41 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 .project {
+  margin-bottom:$mobile-margin;
+  border-bottom: 2px solid $outline-color;
+  padding-bottom:$mobile-margin;
+  &__title-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-top: $mobile-margin;
+    @include tablet {
+      margin-top: $tablet-margin;
+    }
+  }
   &__title {
     margin-block: $mobile-margin 0 0.5rem;
-    font-size: 1rem;
+    font-size: 1.375rem;
     @include tablet {
       margin-block: $tablet-margin 0 $mobile-margin;
-      font-size: 1.5rem;
+      font-size: 2rem;
+    }
+  }
+  &__icon {
+    height: 1.5rem;
+    &:last-child {
+      margin-left: 0.5rem;
+    }
+    @include desktop {
+      height: 2.5rem;
     }
   }
   &__description {
     @include body-font;
     margin-block: $mobile-margin;
     @include tablet {
+      width: 80%;
+      max-width: 60rem;
+      margin: 0 auto;
       margin-block: $tablet-margin;
     }
   }

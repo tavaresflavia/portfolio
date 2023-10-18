@@ -2,7 +2,6 @@ import React from "react";
 import "./Skills.scss";
 import skills from "../../utils/skills";
 import expressIcon from "../../assets/icons/express.png";
-// import mysqlIcon from "../../assets/icons/mysql.png";
 import mysqlColor from "../../assets/icons/mysql-color.svg";
 
 const Skills = () => {
