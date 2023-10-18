@@ -1,14 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./Carousel.scss";
 
 const Carousel = ({ images }) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [autoPlay, setAutoPlay] = useState(true);
-  let timeOut = null;
+  const timeOut = useRef(null);
 
   useEffect(() => {
-    timeOut =
-      autoPlay &&
+    timeOut.current = autoPlay &&
       setTimeout(() => {
         slideRight();
       }, 2500);
@@ -26,7 +25,7 @@ const Carousel = ({ images }) => {
     <div
       className="carousel"
       onMouseEnter={() => {
-        clearTimeout(timeOut);
+        clearTimeout(timeOut.current);
         setAutoPlay(false);
       }}
       onMouseLeave={() => {
