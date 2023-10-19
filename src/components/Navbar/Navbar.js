@@ -1,14 +1,12 @@
-import React from "react";
 import { useState } from "react";
+import { motion as m } from "framer-motion";
 import "./Navbar.scss";
 
 const Navbar = () => {
-  // to change burger classes
   const [burgerClass, setBurgerClass] = useState("burger__bar");
   const [menuClass, setMenuClass] = useState("menu");
   const [isMenuClicked, setIsMenuClicked] = useState(false);
 
-  // toggle burger menu change
   const updateMenu = (e) => {
     if (!isMenuClicked) {
       setBurgerClass("burger__bar--clicked");
@@ -33,7 +31,13 @@ const Navbar = () => {
   };
 
   return (
-    <div  className="nav">
+    <m.section 
+    initial={{ y: -100, opacity: 0 }}
+    animate={{ y: 0, opacity: 1 }}
+    transition={{
+      delay: 2.2,
+      duration: 0.5,
+    }} className="nav">
       <nav className="nav__bar">
 
         <div className="nav__icon">{"</>"} </div>
@@ -58,7 +62,7 @@ const Navbar = () => {
           Projects
         </button>
       </div>
-    </div>
+    </m.section>
   );
 };
 
