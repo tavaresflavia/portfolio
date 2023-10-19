@@ -1,7 +1,6 @@
 import React from "react";
 import { motion as m } from "framer-motion";
 import "./Hero.scss";
-import profilePic from "../../assets/images/profile.png";
 import linkedinIcon from "../../assets/icons/linkedin.png";
 import githubIcon from "../../assets/icons/github.png";
 
@@ -55,7 +54,7 @@ const Hero = () => {
            delay: 1.8,
            duration: 0.5,
          }}
-         className="hero__img" src={profilePic} alt="profile"></m.img>
+         className="hero__img" src="./images/profile.png" alt="profile"></m.img>
         <m.article 
          initial={{ y: 100, opacity: 0 }}
          animate={{ y: 0, opacity: 1 }}

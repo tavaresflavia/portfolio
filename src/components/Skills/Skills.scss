@@ -30,15 +30,15 @@
   }
   &__frame {
     border: solid 2px $outline-color;
-    width: 90px;
-    height: 90px;
+    width: 5.625rem;
+    height: 5.625rem;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
   }
   &__img {
-    width: 90px;
+    width: 5.625rem;
   }
   &__name {
     @include body-font;

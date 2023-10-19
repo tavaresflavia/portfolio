@@ -1,4 +1,5 @@
 import React from "react";
+import { motion as m } from "framer-motion";
 import "./Skills.scss";
 import skills from "../../utils/skills";
 import expressIcon from "../../assets/icons/express.png";
@@ -6,7 +7,13 @@ import mysqlColor from "../../assets/icons/mysql-color.svg";
 
 const Skills = () => {
   return (
-    <section className="skills" id="skills">
+    <m.section 
+    initial={{ y: 100, opacity: 0 }}
+    animate={{ y: 0, opacity: 1 }}
+    transition={{
+      delay: 2.2,
+      duration: 0.5,
+    }} className="skills" id="skills">
       <h2 className="skills__title">Skills</h2>
       <div className="skills__icons">
         {skills.map((skill) => {
@@ -57,7 +64,7 @@ const Skills = () => {
         <h3>Human Languages</h3>
         <p className="skills__notes-content">English | Spanish | Portuguese</p>
       </div>
-    </section>
+    </m.section>
   );
 };
 
