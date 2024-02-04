@@ -18,10 +18,7 @@ const projects = [
     description:
       "A video streaming application that allows video uploading and adding comments.",
     stack: ["react", "sass", "express", "node"],
-    gitRepo: [
-      "https://github.com/tavaresflavia/brainflix",
-      "https://github.com/tavaresflavia/flavia-tavares-brainflix-api",
-    ],
+    gitRepo: "",
     images:[{url:"/images/brainflix-1.png", title: "Video Page"}, {url:"/images/brainflix-2.png", title: "Comment Section"}, {url:"/images/brainflix-3.png", title: "Video Upload"}]
   },
   {

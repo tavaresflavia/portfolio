@@ -21,7 +21,7 @@ const Project = ({ project }) => {
                 className="project__icon"></img>
             </a>
           )}
-          <a
+          {gitRepo && <a
             href={gitRepo[0]}
             onClick={() => {
               gitRepo[1] && window.open(gitRepo[1], "_blank");
@@ -30,7 +30,7 @@ const Project = ({ project }) => {
               src={githubIcon}
               alt="github icon"
               className="project__icon"></img>
-          </a>
+          </a>}
         </div>
       </div>
       <p className="project__description">{description}</p>

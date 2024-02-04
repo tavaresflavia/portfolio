@@ -11,9 +11,6 @@ const Icons = ({ stack }) => {
         const skill = skills.filter(
           (skill) => skill.name.toLocaleLowerCase().split(".")[0] === tech
         )[0];
-        console.log(tech, skill);
-
-    
           return ( skill ?
             <svg
               key={skill.name}
