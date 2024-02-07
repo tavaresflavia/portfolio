@@ -53,16 +53,15 @@ const Skills = () => {
       <div className="skills__notes">
         <h3>Currently Learning</h3>
         <p className="skills__notes-content">
-          Typescript | MongoDB | Tailwind CSS
+          AWS | PostgreSQL | GraphQL
         </p>
 
         <h3>Other Skills</h3>
         <p className="skills__notes-content">
-          {" "}
-          Excel | VBA | PowerBI | Tableau | Minitab
+          Excel | VBA | PowerBI | Tableau | Minitab | Power Automate
         </p>
         <h3>Human Languages</h3>
-        <p className="skills__notes-content">English | Spanish | Portuguese</p>
+        <p className="skills__notes-content">English | Spanish | Portuguese | French (intermediate)</p>
       </div>
     </m.section>
   );
