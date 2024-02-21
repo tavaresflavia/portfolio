@@ -13,10 +13,8 @@
     }
   }
   &__title {
-    margin-block: $mobile-margin 0 0.5rem;
     font-size: 1.375rem;
     @include tablet {
-      margin-block: $tablet-margin 0 $mobile-margin;
       font-size: 2rem;
     }
   }

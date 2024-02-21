@@ -31,7 +31,7 @@ const Navbar = () => {
   };
 
   return (
-    <m.section 
+    <m.header 
     initial={{ y: -100, opacity: 0 }}
     animate={{ y: 0, opacity: 1 }}
     transition={{
@@ -62,7 +62,7 @@ const Navbar = () => {
           Projects
         </button>
       </div>
-    </m.section>
+    </m.header>
   );
 };
 

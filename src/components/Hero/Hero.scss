@@ -6,6 +6,7 @@
   padding-top: 2.5rem;
   @include section-padding;
   &__title {
+    font-weight:normal;
     display: flex;
     font-size: 2.25rem;
     @include tablet {
@@ -111,7 +112,18 @@
     }
     @include desktop {
       height: 2.5rem;
+   
     }
+    // &--resume{
+    //   height: 2rem;
+    //   @include desktop{
+    //   height: 1rem;
+
+
+    //   }
+    
+    // }
+
   }
   &__content {
     @include body-font;

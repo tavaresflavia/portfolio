@@ -25,9 +25,6 @@ const Skills = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   height="3em"
                   viewBox={`0 0 ${skill.width} ${skill.height ? skill.height: "512"}`}>
-                  {
-                    "<!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->"
-                  }
                   <path d={skill.svg} />
                 </svg>
               </div>
