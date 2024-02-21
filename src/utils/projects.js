@@ -10,8 +10,17 @@ const projects = [
       "https://github.com/tavaresflavia/kpi-trek-api",
     ],
     liveSite: "https://kpi-trek.netlify.app",
-    video:"https://www.youtube.com/embed/Eu5hj1LfxmM?si=Dyl_KYN_fgrBXrgX", 
+    video:{origin: "youtube", url: "https://www.youtube.com/embed/Eu5hj1LfxmM?si=Dyl_KYN_fgrBXrgX"}, 
     images: [{url:"/images/kpitrek-home.png", title: "Home Page"},{url:"/images/kpitrek-1.png", title: "Request Page"}, {url:"/images/kpitrek-2.png", title: "KPI Page"}, {url:"/images/kpitrek-3.png", title: "Login (Google & JWT)"}, {url:"/images/kpitrek-2.png", title: "KPI Page"}, {url:"/images/kpitrek-4.png", title: "Request Email"}]
+  },
+  {
+    title: "Seuphoria",
+    description:
+      "An makeup e-commerce with cool parallax effects built with TypeScript, React, Redux, Tailwind, Node, Express, Mongo and Mongoose.",
+    stack: ["typescript", "react", "redux", "tailwind","express", "node", "mongodb"],
+    video:{origin: "local", url: "/videos/seuphoria-demo.mp4"}, 
+    gitRepo: ["https://github.com/tavaresflavia/seuphoria", "https://github.com/tavaresflavia/seuphoria-server"],
+    images:[{url:"/images/seuphoria-1.png", title: "Home Page"}, {url:"/images/seuphoria-2.png", title: "Home Page Parallax"}, {url:"/images/seuphoria-3.png", title: "Shop Page"}, {url:"/images/seuphoria-4.png", title: "Cart Page"}]
   },
   {
     title: "BrainFlix",

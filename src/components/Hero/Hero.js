@@ -88,9 +88,7 @@ const Hero = () => {
             As a 2023 graduate of BrainStation’s full-stack web development
             diploma program, I strengthened my skills in HTML, CSS, SASS,
             Javascript, React, Express and MySQL in a challenging bootcamp
-            timeframe. Now, I'm dedicating my time to further expand my skill
-            set and actively seeking opportunities to kickstart my career as a
-            Junior Developer. </p>
+            timeframe. Embracing the role of Teaching Assistant, guiding students and elucidating complex concepts was incredibly gratifying. This experience not only energized me but also earned me 100% positive feedback.Now, fueled by this rewarding experience, I am eager to embark on a career as a Junior Developer, applying my skills and continuing to grow in a professional setting. </p>
             <p className="bio__content">Feel free to contact me at  
             <a className="bio__email" href="mailto:altavares.flavia@gmail.com"> altavares.flavia@gmail.com</a>.
           </p>
