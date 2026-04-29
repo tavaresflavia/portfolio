@@ -24,10 +24,12 @@ const Navbar = () => {
 
     const el = document.getElementById(e.target.value);
 
-    window.scrollTo({
-      behavior: "smooth",
-      top: el.offsetTop,
-    });
+    if (el) {
+      window.scrollTo({
+        behavior: "smooth",
+        top: el.offsetTop,
+      });
+    }
   };
 
   return (
@@ -51,6 +53,12 @@ const Navbar = () => {
       <div className={menuClass}>
         <button value="home" className="menu__link" onClick={handleNavigate}>
           Home
+        </button>
+        <button
+          value="current-work"
+          className="menu__link"
+          onClick={handleNavigate}>
+          Work
         </button>
         <button value="skills" className="menu__link" onClick={handleNavigate}>
           Skills
