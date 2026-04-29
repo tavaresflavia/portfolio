@@ -3,127 +3,90 @@ import { motion as m } from "framer-motion";
 import "./Hero.scss";
 import linkedinIcon from "../../assets/icons/linkedin.png";
 import githubIcon from "../../assets/icons/github.png";
-import resumeIcon from "../../assets/icons/resume.png";
+
+const resumeUrl =
+  "https://drive.google.com/file/d/1T23x1zRLjnbzYP9Tw5JXVjhsHyfO2eAt/view?usp=sharing";
 
 const Hero = () => {
+  const handleProjectsClick = () => {
+    const projects = document.getElementById("projects");
+
+    if (projects) {
+      window.scrollTo({
+        behavior: "smooth",
+        top: projects.offsetTop,
+      });
+    }
+  };
+
   return (
     <section className="hero" id="home">
-      <h1 className="hero__title">
-        <m.span
-          initial={{ x: -600, scale: 0 }}
-          animate={{ x: 15, scale: 1 }}
-          transition={{
-            delay: 0.8,
-            duration: 0.5,
-            type: "spring",
-            stiffness: 40,
-          }}
-          className="hero__title-left">
-          FL
-        </m.span>
-        <m.span
-          animate={{ rotate: 90 }}
-          transition={{
-            duration: 1,
-            type: "spring",
-            stiffness: 80,
-            damping: 30,
-          }}
-          className="hero__title-mid">
-          {"</>"}
-        </m.span>
-        <m.span
-          initial={{ x: 600, scale: 0 }}
-          animate={{ x: -18, scale: 1 }}
-          transition={{
-            delay: 0.8,
-            duration: 0.5,
-            type: "spring",
-            stiffness: 40,
-          }}
-          className="hero__title-rigth">
-          IA
-        </m.span>
-      </h1>
-      <p className="hero__subtitle">web developer</p>
-
-
-      <div className="hero__profile-container">
-        <m.img
-          initial={{ y: 100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{
-            delay: 1.8,
-            duration: 0.5,
-          }}
-          className="hero__img"
-          src="./images/profile.png"
-          alt="profile"></m.img>
-        <m.article
-          initial={{ y: 100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{
-            delay: 2.2,
-            duration: 0.5,
-          }}
-          className="bio">
-          <div className="bio__title-wrap">
-            <h2 className="bio__title">
-              Engineer | Full-Stack Developer | Data Analyst
-            </h2>
-            <div className="bio__icons">
-              <a href="https://github.com/tavaresflavia">
-                <img
-                  src={githubIcon}
-                  alt="github icon"
-                  className="bio__icon"></img>
-              </a>
-              <a href="https://www.linkedin.com/in/tavaresflavia/">
-                <img
-                  src={linkedinIcon}
-                  alt="linkedin icon"
-                  className="bio__icon"></img>
-              </a>
-              <a href="https://drive.google.com/file/d/1L51VR3Ru_AULAVnAMTBj75Q2T2MLaLzg/view?usp=sharing" ><img className="bio__icon bio__icon--resume" src={resumeIcon} alt="resume icon"></img> </a>
-            </div>
-          </div>
-          <p className="bio__content">👋 Hi, I'm Flavia!</p>
-          <p className="bio__content">
-            I'm a passionate Full Stack Developer committed to turning abstract
-            concepts into fully functional web applications. My greatest
-            satisfaction comes from the ability to convert code into practical
-            products that have a positive impact on my community. That's how it
-            all began!
-          </p>
-          <p className="bio__content">
-            My journey into the world of coding initially kicked off through my
-            work in the manufacturing industry. I began by focusing on
-            automation projects that enhanced processes across various
-            departments. The desire to facilitate and empower my team members in
-            their roles served as my primary motivation for embarking on a
-            self-driven adventure to learn coding. As I immersed myself in this
-            field, I realized the transformative power of coding.{" "}
-          </p>
-          <p className="bio__content">
-            As a 2023 graduate of BrainStation’s full-stack web development
-            diploma program, I strengthened my skills in HTML, CSS, SASS,
-            Javascript, React, Express and MySQL in a challenging bootcamp
-            timeframe. Embracing the role of Teaching Assistant, guiding
-            students and elucidating complex concepts was incredibly gratifying.
-            This experience not only energized me but also earned me 100%
-            positive feedback. Now, fueled by this rewarding experience, I am
-            eager to embark on a career as a Junior Developer, applying my
-            skills and continuing to grow in a professional setting.
-          </p>
-          <p className="bio__content">
-            Feel free to contact me at
-            <a className="bio__email" href="mailto:altavares.flavia@gmail.com">
-              altavares.flavia@gmail.com
+      <m.div
+        initial={{ y: 32, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{
+          delay: 0.4,
+          duration: 0.6,
+        }}
+        className="hero__content">
+        <p className="hero__eyebrow">Product-focused Full Stack Developer</p>
+        <h1 className="hero__headline">
+          Full Stack Developer
+        </h1>
+        <p className="hero__subheadline">
+          Building and modernizing ERP systems, internal tools, and web/mobile
+          features that improve real workflows.
+        </p>
+        <div className="hero__cta">
+          <div className="hero__actions">
+            <button
+              className="hero__button hero__button--primary"
+              onClick={handleProjectsClick}>
+              View Projects
+            </button>
+            <a className="hero__button hero__button--secondary" href={resumeUrl}>
+              Download Resume
             </a>
-            .
-          </p>
-        </m.article>
-      </div>
+          </div>
+          <div className="hero__links">
+            <a href="https://github.com/tavaresflavia">
+              <img src={githubIcon} alt="github icon" className="hero__icon"></img>
+            </a>
+            <a href="https://www.linkedin.com/in/tavaresflavia/">
+              <img
+                src={linkedinIcon}
+                alt="linkedin icon"
+                className="hero__icon"></img>
+            </a>
+          </div>
+        </div>
+      </m.div>
+
+      <m.aside
+        initial={{ y: 32, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{
+          delay: 0.7,
+          duration: 0.6,
+        }}
+        className="hero__visual"
+        aria-label="Product workflow summary">
+        <div className="hero__panel">
+          <p className="hero__panel-label">Impact Snapshot</p>
+          <h2 className="hero__panel-title">Real Systems. Practical Outcomes.</h2>
+          <ul className="hero__impact-list">
+            <li className="hero__impact-item">
+              Modernized ERP architecture for enterprise workflows
+            </li>
+            <li className="hero__impact-item">
+              Improved internal tools used across teams
+            </li>
+            <li className="hero__impact-item">
+              Delivered features used in daily operations
+            </li>
+          </ul>
+        </div>
+      </m.aside>
     </section>
   );
 };
