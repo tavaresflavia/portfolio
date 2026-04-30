@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive portfolio showcasing my work as a Full Stack Developer, focused on building structured, user-centered solutions that improve how people work and learn.
 
-## Available Scripts
+🔗 **Live Site:** https://flavia-tavares.netlify.app/
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This portfolio was designed and built to clearly communicate my experience, projects, and approach to problem-solving as a developer.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Instead of just listing projects, the goal was to present:
 
-### `npm test`
+* The **problems I solve**
+* The **type of systems I build**
+* The **impact of my work**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Clean, responsive UI optimized for desktop and mobile
+* Project showcase with descriptions and links to repositories
+* Resume access and contact section
+* Focus on clarity, usability, and structured layout
+* Fast loading and simple navigation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Tech Stack
 
-### `npm run eject`
+* **Frontend:** React, TypeScript, HTML, CSS/SASS
+* **Deployment:** Netlify
+* **Version Control:** Git & GitHub
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## What I Focused On
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* Designing a **clear and structured user experience**
+* Communicating my work in a way that is easy to scan (recruiter-friendly)
+* Building a **lightweight and performant frontend**
+* Creating a portfolio that reflects my work on **real product features and internal tools**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## Lessons Learned
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Simplicity and clarity matter more than complex design
+* Strong structure improves both user experience and communication
+* A portfolio is not just about visuals — it’s about **positioning**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Future Improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* Add deeper case studies for selected projects
+* Improve storytelling around problem → solution → impact
+* Enhance visual design and interaction details
+* Add blog or technical writing section
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contact
 
-### Making a Progressive Web App
+Feel free to connect with me:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* LinkedIn: https://linkedin.com/in/tavaresflavia
+* GitHub: https://github.com/tavaresflavia
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
