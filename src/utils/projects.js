@@ -3,12 +3,12 @@ const projects = [
     title: "KPI Trek",
     featured: true,
     problem:
-      "Built a KPI tracking platform to help teams manage requests, track progress, and visualize performance in one workflow.",
+      "Built a KPI tracking platform to help teams manage requests, track progress, and visualize performance in a single workflow.",
     description:
       "A KPI tracking and dashboard platform built to improve real-world team workflows. It supports request management, metric visualization, progress tracking, sorting, filtering, status updates, notifications, authentication, and data-driven decision-making.",
     impact: [
-      "Designed workflow tracking system with status and filtering",
-      "Built dashboard-style data visualization for KPIs",
+      "Designed workflow tracking with status and filtering",
+      "Built dashboard-style KPI visualization",
       "Implemented authentication and notifications",
     ],
     stack: ["react", "sass", "mysql", "express", "node"],

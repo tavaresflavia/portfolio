@@ -7,6 +7,10 @@
 
   &__title {
     @include title-font;
+
+    @include tablet {
+      padding-top: 7rem;
+    }
   }
 
   &__layout {
@@ -31,8 +35,14 @@
     font-size: 0.8125rem;
     font-weight: 700;
     letter-spacing: 0.08em;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.625rem;
     text-transform: uppercase;
+  }
+
+  &__intro-line {
+    @include body-font;
+    color: #fff;
+    margin-bottom: 1rem;
   }
 
   &__heading {

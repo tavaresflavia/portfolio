@@ -8,6 +8,10 @@
 
   &__title {
     @include title-font;
+
+    @include tablet {
+      padding-top: 7rem;
+    }
   }
 
   &__intro {

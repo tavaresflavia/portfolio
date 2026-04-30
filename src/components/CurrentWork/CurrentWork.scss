@@ -4,7 +4,11 @@
 .current-work {
   @include section-padding;
   color: #fff;
-  padding-top: 2rem;
+  padding-top: 3rem;
+
+  @include tablet {
+    padding-top: 4rem;
+  }
 
   &__card {
     background: linear-gradient(135deg, rgba($surface-color, 0.96), rgba($dark-color, 0.28));

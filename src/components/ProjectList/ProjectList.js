@@ -7,7 +7,7 @@ import './ProjectList.scss';
 const ProjectList = () => {
   return (
     <section className="projects" id="projects">
-      <h2 className="projects__title">Projects</h2>
+      <h2 className="projects__title">Selected Work</h2>
       <p className="projects__intro">
         Product-focused builds that improve workflows, structure data, and
         support real user decisions.

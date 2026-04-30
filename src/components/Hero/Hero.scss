@@ -3,6 +3,9 @@
 
 .hero {
   @include section-padding;
+  background:
+    linear-gradient(145deg, rgba($dark-color, 0.16), rgba($surface-color, 0.08) 42%, transparent 72%),
+    #070a0c;
   color: #fff;
   display: grid;
   gap: 2.5rem;
@@ -18,11 +21,9 @@
   }
 
   &::before {
-    background: radial-gradient(circle at 78% 18%, rgba($accent-color, 0.12), transparent 28rem),
-      linear-gradient(135deg, rgba($dark-color, 0.16), transparent 32rem);
+    background: linear-gradient(180deg, rgba(#fff, 0.035), transparent 38%);
     content: "";
     inset: 0;
-    opacity: 0.7;
     pointer-events: none;
     position: absolute;
   }

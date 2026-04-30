@@ -10,10 +10,10 @@ const workItems = [
 ];
 
 const impactItems = [
-  "Improved system maintainability and scalability",
-  "Enabled faster feature delivery through modularization",
-  "Enhanced usability of workflows used by internal teams",
-  "Reduced friction in day-to-day operations for users",
+  "Reduced complexity of legacy components through modularization",
+  "Enabled faster delivery of new features",
+  "Improved usability of internal workflows used daily by teams",
+  "Increased visibility into system processes and data",
 ];
 
 const technologies = ["TypeScript", "JavaScript", "SQL", "REST APIs", "RxJS"];
@@ -25,6 +25,9 @@ const CaseStudy = () => {
       <div className="case-study__layout">
         <div className="case-study__intro">
           <p className="case-study__eyebrow">ERP modernization & internal tools</p>
+          <p className="case-study__intro-line">
+            Real-world product work in an enterprise ERP environment.
+          </p>
           <h3 className="case-study__heading">
             ERP Modernization & Internal Tools
           </h3>
