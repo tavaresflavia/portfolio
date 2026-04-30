@@ -2,47 +2,74 @@
 @use "../../styles/partials/mixins" as *;
 
 .nav {
-  width: 100%;
+  background-color: rgba(#000, 0.82);
+  backdrop-filter: blur(1rem);
+  border-bottom: 1px solid rgba($outline-color, 0.12);
   max-width: $desktop-width;
   position: fixed;
-  background-color: #000000;
-  &__bar {
-    color: #fff;
-    height: 2rem;
+  width: 100%;
+  z-index: 10;
+
+  @include tablet {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
-    padding-block: $mobile-margin;
+    padding-inline: $tablet-margin;
   }
+
+  &__bar {
+    color: #fff;
+    display: flex;
+    height: 4rem;
+    justify-content: space-between;
+    padding: 1rem;
+
+    @include tablet {
+      padding-inline: 0;
+    }
+  }
+
   &__icon {
-    transform: rotate(90deg);
+    color: $accent-color;
     font-size: 1.5rem;
+    font-weight: 700;
+    transform: rotate(90deg);
   }
 }
 
 .burger {
+  cursor: pointer;
+
+  @include tablet {
+    display: none;
+  }
+
   &__bar {
-    width: 2rem;
-    height: 0.25em;
     background-color: #fff;
     border-radius: 0.25rem;
+    height: 0.25em;
     margin-top: 0.25rem;
     transform: rotate(0) translate(0);
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+    width: 2rem;
+
     &--clicked {
-      width: 2rem;
-      height: 0.25em;
       background-color: #fff;
       border-radius: 0.5em;
+      height: 0.25em;
+      width: 2rem;
+
       &:nth-child(1) {
         transform: rotate(45deg);
         transform-origin: left;
         transition: ease-out 0.5s;
       }
+
       &:nth-child(2) {
         transform: scale(0);
         transition: ease-out 0.5s;
       }
+
       &:nth-child(3) {
         transform: rotate(-45deg) translateX(-0.35rem);
         transition: ease-out 0.5s;
@@ -53,37 +80,48 @@
 
 .menu {
   display: none;
-  &--visible {
-    position: absolute;
+
+  @include tablet {
     display: flex;
-    align-items: flex-end;
-    right: 0;
+    gap: 0.5rem;
+  }
+
+  &--visible {
+    align-items: stretch;
+    background-color: rgba(#000, 0.96);
+    border-bottom: 1px solid rgba($outline-color, 0.12);
+    display: flex;
     flex-direction: column;
-    z-index: 1000;
-    border-bottom-left-radius: 0.5rem;
-    background-color: #000;
-    margin: 0 auto;
-    width: 4rem;
+    position: absolute;
+    right: 0;
+    width: 100%;
 
     @include tablet {
-      width: 6.25rem;
+      align-items: center;
+      background-color: transparent;
+      border: none;
+      flex-direction: row;
+      position: static;
+      width: auto;
     }
   }
 
   &__link {
-    font-weight: 600;
-    color: #fff;
-    background-color: #000000;
+    background-color: transparent;
     border: none;
-    margin: 0 auto;
-    margin-block: 0.5rem;
+    color: $muted-color;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 0.875rem 1rem;
+    text-align: left;
+    transition: color 0.2s ease;
+
     @include tablet {
-      font-size: 1.125rem;
-      font-weight: 600;
-      margin-block: $mobile-margin;
+      text-align: center;
     }
+
     &:hover {
-      border-bottom: solid 2px #fff;
+      color: #fff;
     }
   }
 }

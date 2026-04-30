@@ -1,63 +1,87 @@
 import React from "react";
 import "./Project.scss";
-import Carousel from "../Carousel/Carousel";
-import githubIcon from "../../assets/icons/github.png";
-import liveIcon from "../../assets/icons/live.png";
-import Icons from "../Icons/Icons";
+
+const stackLabels = {
+  html: "HTML",
+  css: "CSS",
+  javascript: "JavaScript",
+  typescript: "TypeScript",
+  react: "React",
+  redux: "Redux",
+  sass: "SASS",
+  tailwind: "Tailwind",
+  express: "Express",
+  node: "Node.js",
+  mysql: "MySQL",
+  mongodb: "MongoDB",
+};
 
 const Project = ({ project }) => {
-  const { title, description, video, images, liveSite, gitRepo, stack } =
-    project;
+  const {
+    title,
+    problem,
+    description,
+    impact = [],
+    images,
+    liveSite,
+    gitRepo,
+    stack = [],
+    featured,
+  } = project;
+
+  const repoLinks = Array.isArray(gitRepo) ? gitRepo : gitRepo ? [gitRepo] : [];
+  const previewImage = images?.[0];
 
   return (
-    <article className="project">
-      <div className="project__title-wrap">
+    <article className={`project ${featured ? "project--featured" : ""}`}>
+      <div className="project__content">
+        {featured && <p className="project__eyebrow">Featured Project</p>}
         <h3 className="project__title">{title}</h3>
-        <div className="project__icons">
+        <p className="project__problem">{problem || description}</p>
+        {impact.length > 0 && (
+          <ul className="project__impact">
+            {impact.map((item) => (
+              <li className="project__impact-item" key={item}>
+                {item}
+              </li>
+            ))}
+          </ul>
+        )}
+        {stack.length > 0 && (
+          <div className="project__stack">
+            {stack.map((tech) => (
+              <span className="project__tag" key={tech}>
+                {stackLabels[tech] || tech}
+              </span>
+            ))}
+          </div>
+        )}
+        <div className="project__actions">
           {liveSite && (
-            <a href={liveSite}>
-              <img
-                src={liveIcon}
-                alt="live site icon"
-                className="project__icon"></img>
+            <a className="project__button project__button--primary" href={liveSite}>
+              Live
             </a>
           )}
-          {gitRepo && (
-            <a
-              href={gitRepo[0]}
-              onClick={() => {
-                gitRepo[1] && window.open(gitRepo[1], "_blank");
-              }}>
-              <img
-                src={githubIcon}
-                alt="github icon"
-                className="project__icon"></img>
+          {repoLinks.map((repo, index) => (
+            <a className="project__button" href={repo} key={repo}>
+              {index === 0 ? "Code" : "API"}
             </a>
-          )}
+          ))}
         </div>
       </div>
-      <p className="project__description">{description}</p>
-      {stack && <Icons stack={stack} />}
-      {images && <Carousel images={images} />}
-      {video &&
-        (video.origin === "youtube" ? (
-          <iframe
-            className="project__video"
-            src={video.url}
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen></iframe>
+      <div className="project__preview">
+        {previewImage ? (
+          <img
+            className="project__image"
+            src={previewImage.url}
+            alt={`${title} preview`}
+          />
         ) : (
-          <video
-            className="project__video"
-            muted
-            autoPlay
-            src={video.url}
-            loop
-            controls>
-            Your browser does not support the HTML5 Video element.
-          </video>
-        ))}
+          <div className="project__placeholder">
+            <span>{title}</span>
+          </div>
+        )}
+      </div>
     </article>
   );
 };
