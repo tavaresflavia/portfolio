@@ -2,65 +2,73 @@
 @use "../../styles/partials/mixins" as *;
 
 .skills {
-  color: #fff;
   @include section-padding;
+  color: #fff;
+
   &__title {
     @include title-font;
   }
-  &__icons {
-    padding: 0.2rem;
+
+  &__grid {
+    display: grid;
+    gap: 1rem;
+
+    @include tablet {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  &__group {
+    background-color: rgba($surface-color, 0.82);
+    border: 1px solid rgba($outline-color, 0.18);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+      border-color: rgba($accent-color, 0.7);
+      transform: translateY(-2px);
+    }
+
+    &--secondary {
+      background-color: rgba($surface-color, 0.48);
+      border-color: rgba($outline-color, 0.12);
+    }
+  }
+
+  &__group-title {
+    font-size: 1rem;
+    margin-bottom: 0.875rem;
+  }
+
+  &__tags {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    @include tablet{
-      max-width: 52rem;
-      margin: auto;
-      justify-content: space-between  ;
-    }
+    gap: 0.625rem;
   }
-  &__wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 0.5rem $mobile-margin;
-    @include tablet {
-      margin-inline: $tablet-margin;
 
-    }
-  }
-  &__frame {
-    border: solid 2px $outline-color;
-    width: 5.625rem;
-    height: 5.625rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-  }
-  &__img {
-    width: 5.625rem;
-  }
-  &__name {
+  &__tag {
     @include body-font;
-    margin-top: 0.5rem;
-  }
-  &__notes {
-    margin: $mobile-margin auto 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  &__notes-content {
-    @include body-font;
-    margin: 0.5rem 0 $mobile-margin;
-    @include tablet{
-    margin-bottom: $tablet-margin;
+    background-color: rgba($outline-color, 0.06);
+    border: 1px solid rgba($outline-color, 0.12);
+    border-radius: 999px;
+    color: $muted-color;
+    line-height: 1.25rem;
+    padding: 0.25rem 0.625rem;
+
+    &--primary {
+      background-color: rgba($accent-color, 0.2);
+      border-color: rgba($accent-color, 0.82);
+      box-shadow: 0 0 1.25rem rgba($accent-color, 0.08);
+      color: #fff;
+      font-weight: 700;
     }
-    &:last-child{
-      margin-bottom: 0;
-      @include tablet{
-        margin-bottom:0;
-        }
-    }
+  }
+
+  &__group--secondary &__tag {
+    background-color: rgba($outline-color, 0.04);
+    border-color: rgba($outline-color, 0.09);
+    color: rgba($muted-color, 0.68);
+    font-size: 0.875rem;
   }
 }
